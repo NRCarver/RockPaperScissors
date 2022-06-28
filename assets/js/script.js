@@ -2,24 +2,6 @@ function newGame () {
 
 }
 
-
-
-function endGame () {
-
-}
-
-function playerWin () {
-   
-}
-
-function computerWin () {
-
-}
-
-function endGame () {
-
-}
-
 function classicGame () {
    
 }
@@ -60,8 +42,17 @@ choiceButtons.forEach(choiceButton => {
 
 function makeChoice(choice) {
     const computerChoice = computerIndex()
+    const userWinner = decideWinner(choice, computerChoice)
+    const computerWinner = decideWinner(computerChoice, choice)
     console.log(computerChoice)
 }
+
+
+
+function decideWinner(choice, computerChoice){
+    return choice.beats == computerChoice.name
+}
+
 
 function computerIndex () {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
