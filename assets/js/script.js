@@ -2,9 +2,7 @@ function newGame () {
 
 }
 
-function computerChoice () {
 
-}
 
 function endGame () {
 
@@ -26,7 +24,7 @@ function classicGame () {
    
 }
 
-const CHOICE = [
+const CHOICES = [
     {
         name: 'rock',
         beats: 'scissors' || 'lizard'
@@ -55,12 +53,18 @@ const choiceButtons = document.querySelectorAll(`[data-choice]`)
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
         const choiceName = choiceButton.dataset.choice
-        const choice = CHOICE.find(choice => choice.name === choiceName)
+        const choice = CHOICES.find(choice => choice.name === choiceName)
         makeChoice(choice)
     })
 })
 
 function makeChoice(choice) {
-    console.log(choice)
+    const computerChoice = computerIndex()
+    console.log(computerChoice)
+}
+
+function computerIndex () {
+    const randomIndex = Math.floor(Math.random() * CHOICES.length)
+    return CHOICES[randomIndex]
 }
 
