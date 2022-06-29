@@ -31,6 +31,8 @@ const choiceButtons = document.querySelectorAll('[data-choice]')
 const resultsColumn = document.querySelector('[results-column]')
 const computerScore = document.querySelector('[computer-score]')
 const userScore = document.querySelector('[user-score]')
+let roundCount = 1
+let maxRounds = 5
 
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
@@ -50,6 +52,21 @@ function makeChoice(choice) {
 
     if (userWinner) incrementUserScore(userScore)
     if (computerWinner) incrementComputerScore(computerScore)
+
+    roundCount++;
+    roundCountOutput.innerText = `${roundCount}`;
+
+     if (roundCount >= maxRounds) {
+        setTimeout(function() {
+            alert("Game Over. The score was " + userScore.innerText + "-" + computerScore.innerText)
+        }, 200);
+
+        let disabledButtons = document.getElementsByClassName("choice");
+            for(var i = 0; i < disabledButtons.length; i++) {
+            disabledButtons[i].disabled = true;
+        }
+        
+     }
 }
 
 function incrementUserScore(userScore) {
@@ -88,6 +105,7 @@ const startClassicButton = document.getElementById('start-classic-button')
 const startRPSLSButton = document.getElementById('start-rpsls-button')
 const gameContainer = document.getElementById('game-container')
 const extraOptions = document.getElementById('rpsls-only')
+const gameLength = document.getElementById('game-length-choices')
 
 startClassicButton.addEventListener('click', startClassic);
 startRPSLSButton.addEventListener('click', startRPSLS);
@@ -97,14 +115,15 @@ function startClassic() {
     startRPSLSButton.classList.add('hidden');
     extraOptions.classList.add('hidden');
     gameContainer.classList.remove('hidden');
-    CHOICES.splice(3,2)
+    gameLength.classList.remove('hidden');
+    CHOICES.splice(3,2);
 }
 
 function startRPSLS() {
     startClassicButton.classList.add('hidden');
     startRPSLSButton.classList.add('hidden');
     gameContainer.classList.remove('hidden');
+    gameLength.classList.remove('hidden')
 }
 
-var gameLength = 5
-const currentGameLength = parseInt(userScore.innerText) + parseInt(computerScore.innerText)
+let roundCountOutput = document.getElementById('round-count')
