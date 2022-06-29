@@ -34,6 +34,28 @@ const userScore = document.querySelector('[user-score]')
 let roundCount = 0
 let maxRounds = 5
 
+/*const gameLengthShort = document.getElementById('game-length-choice1')
+const gameLengthMedium = document.getElementById('game-length-choice2')
+const gameLengthLong = document.getElementById('game-length-choice3')
+
+gameLengthShort.addEventListener('click', gameLengthShort)
+gameLengthMedium.addEventListener('click', gameLengthMedium)
+gameLengthLong.addEventListener('click', gameLengthLong)
+
+function gameLengthShort() {
+    gameContainer.classList.remove('hidden');
+    let maxRounds = '1'
+}
+
+function gameLengthMedium() {
+    gameContainer.classList.remove('hidden');
+    let maxRounds = '3'
+}
+
+function gameLengthLong() {
+    gameContainer.classList.remove('hidden');
+    let maxRounds = '5'
+}*/
 
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
@@ -61,14 +83,14 @@ function makeChoice(choice) {
         playAgain.classList.remove('hidden');
         setTimeout(function() {
             alert("Game Over. The score was " + userScore.innerText + "-" + computerScore.innerText)
-        }, 200);
+        }, 300);
 
         let disabledButtons = document.getElementsByClassName("choice");
             for(var i = 0; i < disabledButtons.length; i++) {
             disabledButtons[i].disabled = true;
         }
         
-}
+    }
 }
 
 function incrementUserScore(userScore) {
@@ -80,11 +102,11 @@ function incrementComputerScore(computerScore) {
 }
 
 function addChoiceResult(choice, winner) {
-    const div = document.createElement('div')
-    div.innerText = choice.name
-    div.classList.add('result-choice')
-    if (winner) div.classList.add('winner')
-    resultsColumn.after(div)
+    const pastResults = document.createElement('div')
+    pastResults.innerText = choice.name
+    pastResults.classList.add('result-choice')
+    if (winner) pastResults.classList.add('winner')
+    resultsColumn.after(pastResults)
 }
 
 
@@ -110,6 +132,8 @@ const extraOptions = document.getElementById('rpsls-only')
 const gameLengthBox = document.getElementById('game-length-choices')
 const playAgain = document.getElementById('play-again')
 
+
+
 startClassicButton.addEventListener('click', startClassic);
 startRPSLSButton.addEventListener('click', startRPSLS);
 playAgain.addEventListener('click', resetGame)
@@ -134,17 +158,15 @@ let roundCountOutput = document.getElementById('round-count')
 
 function resetGame() {
     return window.location.assign(`index.html`)
-    //startClassicButton.classList.remove('hidden');
-    //startRPSLSButton.classList.remove('hidden');
-    //extraOptions.classList.remove('hidden');
-    //gameContainer.classList.add('hidden');
-    //gameLengthBox.classList.add('hidden');
+    /*startClassicButton.classList.remove('hidden');
+    startRPSLSButton.classList.remove('hidden');
+    extraOptions.classList.remove('hidden');
+    gameContainer.classList.add('hidden');
+    gameLengthBox.classList.add('hidden');
+    pastResults.innerText.display = "none";
 
-    //let disabledButtons = document.getElementsByClassName("choice");
-     //       for(var i = 0; i < disabledButtons.length; i++) {
-       //     disabledButtons[i].disabled = false;
-        //}
-    //roundCount = 0
-    //maxRounds = 5
-    
+    let disabledButtons = document.getElementsByClassName("choice");
+            for(var i = 0; i < disabledButtons.length; i++) {
+            disabledButtons[i].disabled = false;
+        }*/
 }
