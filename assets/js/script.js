@@ -30,7 +30,8 @@ const CHOICES = [
 ];
 
 
-const choiceButtons = document.querySelectorAll(`[data-choice]`)
+const choiceButtons = document.querySelectorAll('[data-choice]')
+const resultsColumn = document.querySelectorAll('[results-column]')
 
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
@@ -44,9 +45,18 @@ function makeChoice(choice) {
     const computerChoice = computerIndex()
     const userWinner = decideWinner(choice, computerChoice)
     const computerWinner = decideWinner(computerChoice, choice)
-    console.log(computerChoice)
+    
+    addChoiceResult(computerChoice, computerWinner)
+    addChoiceResult(choice, userWinner)
 }
 
+function addChoiceResult(choice, winner) {
+    const div = document.createElement('div')
+    div.innerText = selection.name
+    div.classList.add('result-choice')
+    if (winner) div.classList.add('winner')
+    resultsColumn.after(div)
+}
 
 
 function decideWinner(choice, computerChoice){
