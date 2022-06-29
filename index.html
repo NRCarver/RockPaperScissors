@@ -29,57 +29,76 @@
         <h2>How to play:</h2>
         </div>
         <span class="instruction-box-left"><h2>Rock Paper Scissors Lizard Spock Instructions</h2>
-            <p> Rock beats Scissors and Lizard <br> Paper beats Rock and Spock <br> Scissors beats Paper and Lizard <br> Lizard beats Spock and Paper <br> Spock beats Scissors and Rock <br> This is a new twist on the classic game! <br> Select the icon and see if you can beat the computer!</p></span>
-        <span><img src="https://www.seekpng.com/png/detail/207-2077427_rock-paper-scissors-lizard-spock-rock-paper-scissors.png" alt="Rock Paper Scissors Lizard Spock] - Rock Paper Scissors Lizard Spock Icons@seekpng.com" class="explain-image"></span>
+            <p> Rock beats Scissors and Lizard <br> Paper beats Rock and Spock <br> Scissors beats Paper and Lizard <br> Lizard beats Spock and Paper <br> Spock beats Scissors and Rock <br> This is a new twist on the classic game, <br> Select the icon and see if you can beat the computer! <br> The best of 5 rounds, wins!</p></span>
+        <span><img src="assets/images/rpsls-icon.png" alt="Rock Paper Scissors Lizard Spock Icon" class="explain-image"></span>
         <span class="instruction-box-right"><h2>Rock Paper Scissors Classic Instructions</h2>
-            <p> Rock beats Scissors <br> Paper beats Rock <br> Scissors beats Paper <br> Scissors beats Paper <br> Select the icon and see if you can beat the computer!</p></span>
+            <p> Rock beats Scissors <br> Paper beats Rock <br> Scissors beats Paper <br> Select the icon and see if you can beat the computer! <br> The best of 5 rounds, wins!</p></span>
      </div>
 
      <br>
 
-     <button id="start-classic-button">Start Rock Paper Scissors Game!</button>
-     <button id="start-rpsls-button">Start Rock Paper Scissors Lizard Spock Game!</button>
+     <div class="game-area">
+        <button id="start-classic-button" class="start-game">Start 'Rock Paper Scissors' Game!</button>
+        <button id="start-rpsls-button" class="start-game">Start 'Rock Paper Scissors Lizard Spock' Game!</button>
 
-     <div id="game-length-choices" class="hidden">
-        <h3>How many Rounds would you like to play?</h3>
-        <br>
-        <button id="game-length-choice1" value="1">1</button>
-        <button id="game-length-choice3" value="3">3</button>
-        <button id="game-length-choice5" value="5">5</button>
-    </div>
+        <!--<div id="game-length-choices" class="hidden game-length">
+            <h3>How many Rounds would you like to play?</h3>
+            <br>
+            <button id="game-length-choice1" value="1">1</button>
+            <button id="game-length-choice3" value="3">3</button>
+            <button id="game-length-choice5" value="5">5</button>
+        </div>-->
      
     
-     <div id="game-container" class="hidden">
-        <div>
+        <div id="game-container" class="hidden">
             <div>
-                <h2>Round Number: <span id="round-count"></span></h2>
-            </div>
-            <div id="play-again" class="hidden">
-                <button type="reset">Play Again?</button>
-            </div>
-            <div class="choices">
-                <button class="choice" data-choice="rock" id="test">Rock</button>
-                <button class="choice" data-choice="paper">Paper</button>
-                <button class="choice" data-choice="scissors">Scissors</button>
-            </div>
-            <span id="rpsls-only">
-                <button class="choice" data-choice="lizard">Lizard</button>
-                <button class="choice" data-choice="spock">Spock</button>
-            </span>
-            <div class="results">
-                <div>You
-                    <br>
-                    <span class="result-score" user-score>0</span>
+                <div>
+                    <h2>Round Number: <span id="round-count"></span></h2>
                 </div>
-                <div results-column>Computer
-                    <br>
-                    <span class="result-score" computer-score>0</span>
+                <div id="play-again" class="hidden">
+                    <button type="reset" class="play-again">Play Again?</button>
                 </div>
-                <div class="result-choice"></div>
-                <div class="result-choice"></div>
+                <div class="choices">
+                    <button class="choice" data-choice="rock"><i class="fa-solid fa-gem"></i><br>Rock</button>
+                    <button class="choice" data-choice="paper"><i class="fa-solid fa-note-sticky"></i><br>Paper</button>
+                    <button class="choice" data-choice="scissors"><i class="fa-solid fa-scissors"></i><br>Scissors</button>
+                </div>
+                <span id="rpsls-only">
+                    <button class="choice" data-choice="lizard"><i class="fa-solid fa-bugs"></i><br>Lizard</button>
+                    <button class="choice" data-choice="spock"><i class="fa-solid fa-hand-spock"></i><br>Spock</button>
+                </span>
+                <div class="results">
+                    <div class="result-heading">You
+                        <br>
+                        <span class="result-score" user-score>0</span>
+                    </div>
+                    <div results-column class="result-heading">Computer
+                        <br>
+                        <span class="result-score" computer-score>0</span>
+                    </div>
+                    <div class="result-choice"></div>
+                    <div class="result-choice"></div>
+                </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <ul class="social-networks">
+            <li>
+                <a aria-label="Visit our Facebook page (opens in a new tab)" href="https://facebook.com" rel="noopener" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a aria-label="Visit our Twitter page (opens in a new tab)" href="https://twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+                <a aria-label="Visit our YouTube page (opens in a new tab)" href="https://youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            </li>
+            <li>
+                <a aria-label="Visit our Instagram page (opens in a new tab)" href="https://instagram.com" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
     <script src="https://kit.fontawesome.com/83f5f56d8f.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

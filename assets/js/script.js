@@ -106,6 +106,7 @@ function addChoiceResult(choice, winner) {
     pastResults.innerText = choice.name
     pastResults.classList.add('result-choice')
     if (winner) pastResults.classList.add('winner')
+    else pastResults.classList.add('loser')
     resultsColumn.after(pastResults)
 }
 
@@ -158,15 +159,4 @@ let roundCountOutput = document.getElementById('round-count')
 
 function resetGame() {
     return window.location.assign(`index.html`)
-    /*startClassicButton.classList.remove('hidden');
-    startRPSLSButton.classList.remove('hidden');
-    extraOptions.classList.remove('hidden');
-    gameContainer.classList.add('hidden');
-    gameLengthBox.classList.add('hidden');
-    pastResults.innerText.display = "none";
-
-    let disabledButtons = document.getElementsByClassName("choice");
-            for(var i = 0; i < disabledButtons.length; i++) {
-            disabledButtons[i].disabled = false;
-        }*/
 }
