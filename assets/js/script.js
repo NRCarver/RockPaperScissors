@@ -9,29 +9,36 @@ function classicGame () {
 const CHOICES = [
     {
         name: 'rock',
-        beats: ['scissors' || 'lizard']
+        beats: 'scissors', 
+        also: 'lizard'
     },
     {
         name: 'paper',
-        beats: [['rock'] ['spock']]
+        beats: 'rock',
+        also: 'spock'
     },
     {
         name: 'scissors',
-        beats: [['paper'] ['lizard']]
+        beats: 'paper',
+        also: 'lizard'
     },
     {
         name: 'lizard',
-        beats: [['paper'] ['spock']]
+        beats: 'paper',
+        also: 'spock'
     },
     {
         name: 'spock',
-        beats: [['scissors'] ['rock']]
+        beats: 'scissors',
+        also: 'rock'
     },
 ];
 
 
 const choiceButtons = document.querySelectorAll('[data-choice]')
 const resultsColumn = document.querySelector('[results-column]')
+const computerScore = document.querySelector('[computer-score]')
+const userScore = document.querySelector('[user-score]')
 
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
@@ -48,6 +55,17 @@ function makeChoice(choice) {
     
     addChoiceResult(computerChoice, computerWinner)
     addChoiceResult(choice, userWinner)
+
+    if (userWinner) incrementUserScore(userScore)
+    if (computerWinner) incrementComputerScore(computerScore)
+}
+
+function incrementUserScore(userScore) {
+    userScore.innerText = parseInt(userScore.innerText) + 1
+}
+
+function incrementComputerScore(computerScore) {
+    computerScore.innerText = parseInt(computerScore.innerText) + 1
 }
 
 function addChoiceResult(choice, winner) {
@@ -60,7 +78,12 @@ function addChoiceResult(choice, winner) {
 
 
 function decideWinner(choice, computerChoice){
-    return choice.beats == computerChoice.name
+    if (choice.beats == computerChoice.name) {
+        return choice.beats == computerChoice.name
+    }
+    if (choice.also == computerChoice.name) {
+        return choice.also == computerChoice.name
+    }   
 }
 
 
