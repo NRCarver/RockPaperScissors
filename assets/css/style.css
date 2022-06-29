@@ -67,3 +67,11 @@ ul {
     font-size: 200%;
     padding-bottom: 5px;
 }
+
+#game-container {
+
+}
+
+.hidden {
+    visibility: hidden;
+}

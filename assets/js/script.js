@@ -1,11 +1,3 @@
-function newGame () {
-
-}
-
-function classicGame () {
-   
-}
-
 const CHOICES = [
     {
         name: 'rock',
@@ -92,3 +84,27 @@ function computerIndex () {
     return CHOICES[randomIndex]
 }
 
+const startClassicButton = document.getElementById('start-classic-button')
+const startRPSLSButton = document.getElementById('start-rpsls-button')
+const gameContainer = document.getElementById('game-container')
+const extraOptions = document.getElementById('rpsls-only')
+
+startClassicButton.addEventListener('click', startClassic);
+startRPSLSButton.addEventListener('click', startRPSLS);
+
+function startClassic() {
+    startClassicButton.classList.add('hidden');
+    startRPSLSButton.classList.add('hidden');
+    extraOptions.classList.add('hidden');
+    gameContainer.classList.remove('hidden');
+    CHOICES.splice(3,2)
+}
+
+function startRPSLS() {
+    startClassicButton.classList.add('hidden');
+    startRPSLSButton.classList.add('hidden');
+    gameContainer.classList.remove('hidden');
+}
+
+var gameLength = 5
+const currentGameLength = parseInt(userScore.innerText) + parseInt(computerScore.innerText)
