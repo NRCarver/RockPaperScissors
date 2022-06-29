@@ -9,24 +9,24 @@ function classicGame () {
 const CHOICES = [
     {
         name: 'rock',
-        beats: 'scissors' || 'lizard'
+        beats: ['scissors' || 'lizard']
     },
     {
         name: 'paper',
-        beats: 'rock' || 'spock'
+        beats: [['rock'] ['spock']]
     },
     {
         name: 'scissors',
-        beats: 'paper' || 'lizard'
+        beats: [['paper'] ['lizard']]
     },
     {
         name: 'lizard',
-        beats: 'paper' || 'spock'
+        beats: [['paper'] ['spock']]
     },
     {
         name: 'spock',
-        beats: 'scissors' || 'rock'
-    }
+        beats: [['scissors'] ['rock']]
+    },
 ];
 
 
