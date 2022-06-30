@@ -28,7 +28,6 @@ ul {
 .nav-bar {
     padding: 0;
     margin: 0;
-    position: top;
     background-color: rgb(57, 126, 153);
     top: 0;
     height: 90px;
@@ -52,7 +51,6 @@ ul {
 	border-radius: 1rem;
 	line-height: 1.6;
 	float: left;
-    outline: black, 1px;
     text-overflow: inherit;
 }
 
@@ -65,7 +63,6 @@ ul {
 	border-radius: 1rem;
 	line-height: 1.6;
 	float: right;
-    outline: black, 1px;
     text-overflow: inherit;
 }
 
@@ -102,7 +99,6 @@ ul {
 }
 
 .choices {
-    display: absolute;
     justify-content: center;
 }
 
@@ -209,7 +205,6 @@ footer {
 	}
 
     .explain-image {
-        size: 80%;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
