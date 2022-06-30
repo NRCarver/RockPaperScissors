@@ -29,6 +29,7 @@ const CHOICES = [
 ];
 
 
+
 const choiceButtons = document.querySelectorAll('[data-choice]')
 const resultsColumn = document.querySelector('[results-column]')
 const computerScore = document.querySelector('[computer-score]')
@@ -44,6 +45,8 @@ choiceButtons.forEach(choiceButton => {
         makeChoice(choice)
     })
 })
+
+/* Determine the Computers selection, who won the round and increasing the round counter and ending the game after 5 rounds */
 
 function makeChoice(choice) {
     const computerChoice = computerIndex()
@@ -73,6 +76,8 @@ function makeChoice(choice) {
     }
 }
 
+/* Increase the display scores for user and computer */
+
 function incrementUserScore(userScore) {
     userScore.innerText = parseInt(userScore.innerText) + 1
 }
@@ -80,6 +85,8 @@ function incrementUserScore(userScore) {
 function incrementComputerScore(computerScore) {
     computerScore.innerText = parseInt(computerScore.innerText) + 1
 }
+
+/* Display what happened to the user, showing both selections and highlighting the winner */
 
 function addChoiceResult(choice, winner) {
     const pastResults = document.createElement('div')
@@ -90,6 +97,7 @@ function addChoiceResult(choice, winner) {
     resultsColumn.after(pastResults)
 }
 
+/* Logic to determine who wins */
 
 function decideWinner(choice, computerChoice){
     if (choice.beats == computerChoice.name) {
@@ -100,6 +108,7 @@ function decideWinner(choice, computerChoice){
     }   
 }
 
+/* Computers random selection */
 
 function computerIndex () {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
