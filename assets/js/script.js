@@ -34,29 +34,6 @@ const userScore = document.querySelector('[user-score]')
 let roundCount = 0
 let maxRounds = 5
 
-/*const gameLengthShort = document.getElementById('game-length-choice1')
-const gameLengthMedium = document.getElementById('game-length-choice2')
-const gameLengthLong = document.getElementById('game-length-choice3')
-
-gameLengthShort.addEventListener('click', gameLengthShort)
-gameLengthMedium.addEventListener('click', gameLengthMedium)
-gameLengthLong.addEventListener('click', gameLengthLong)
-
-function gameLengthShort() {
-    gameContainer.classList.remove('hidden');
-    let maxRounds = '1'
-}
-
-function gameLengthMedium() {
-    gameContainer.classList.remove('hidden');
-    let maxRounds = '3'
-}
-
-function gameLengthLong() {
-    gameContainer.classList.remove('hidden');
-    let maxRounds = '5'
-}*/
-
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
         const choiceName = choiceButton.dataset.choice
