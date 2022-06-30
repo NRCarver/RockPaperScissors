@@ -19,10 +19,6 @@ header {
     z-index: 998;
 }
 
-ul {
-    margin: 0;
-}
-
 /* Header for the page that will always stay at the top of the page */
 
 .nav-bar {
@@ -111,6 +107,11 @@ ul {
     margin-top: 30px;
 }
 
+.choice:hover {
+    background-color: navy;
+    color: whitesmoke
+}
+
 .play-again {
     cursor: pointer;
     font-size: 200%;
@@ -118,6 +119,11 @@ ul {
     margin-right: 10px;
     margin-top: 5px;
     padding: 20px;
+}
+
+.play-again:hover {
+    background-color: navy;
+    color: whitesmoke
 }
 
 /* Styling for the results display showing scores and previous results */
