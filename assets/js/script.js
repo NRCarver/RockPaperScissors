@@ -31,9 +31,9 @@ const CHOICES = [
 
 
 const choiceButtons = document.querySelectorAll('[data-choice]')
-const resultsColumn = document.querySelector('[results-column]')
-const computerScore = document.querySelector('[computer-score]')
-const userScore = document.querySelector('[user-score]')
+const resultsColumn = document.getElementById('results-column')
+const computerScore = document.getElementById('computer-score')
+const userScore = document.getElementById('user-score')
 let roundCount = 0
 let maxRounds = 5
 let roundCountOutput = document.getElementById('round-count')
@@ -114,6 +114,8 @@ function computerIndex () {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
     return CHOICES[randomIndex]
 }
+
+
 
 const startClassicButton = document.getElementById('start-classic-button')
 const startRPSLSButton = document.getElementById('start-rpsls-button')
