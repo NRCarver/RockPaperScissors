@@ -23,6 +23,8 @@ ul {
     margin: 0;
 }
 
+/* Header for the page that will always stay at the top of the page */
+
 .nav-bar {
     padding: 0;
     margin: 0;
@@ -34,6 +36,8 @@ ul {
 	z-index: 999;
     word-spacing: 25px;
 }
+
+/* Styling for the instructions and the imaging showing the different game combinations */
 
 #instruction-title {
     text-decoration: underline;
@@ -70,6 +74,8 @@ ul {
     z-index: -9999;
     align-items: center;
 }
+
+/* Styling for the Game Buttons */
 
 .start-game {
     border-radius: 1.5rem;
@@ -118,6 +124,8 @@ ul {
     padding: 20px;
 }
 
+/* Styling for the results display showing scores and previous results */
+
 .results {
     display: grid;
     justify-content: center;
@@ -153,6 +161,8 @@ ul {
     left: 5%;
 }
 
+/* Styling for the footer of the page */
+
 footer {
 	height: 75px;
 	padding: 0;
@@ -160,6 +170,7 @@ footer {
 	margin: 0;
 	border-top: 3px solid black;
 }
+
 
 .social-networks {
 	background-color: rgb(57, 126, 153);
@@ -176,6 +187,8 @@ footer {
 	padding: 1%;
 	color: black;
 }
+
+/** Media queries for smaller screen sizes */
 
 @media screen and (max-width: 800px) {
 	.instruction-box-right {

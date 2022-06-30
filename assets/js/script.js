@@ -1,3 +1,5 @@
+/* Rules for all the different possible outcomes in the Game */
+
 const CHOICES = [
     {
         name: 'rock',
@@ -33,6 +35,7 @@ const computerScore = document.querySelector('[computer-score]')
 const userScore = document.querySelector('[user-score]')
 let roundCount = 0
 let maxRounds = 5
+let roundCountOutput = document.getElementById('round-count')
 
 choiceButtons.forEach(choiceButton => {
     choiceButton.addEventListener('click', e => {
@@ -110,7 +113,7 @@ const extraOptions = document.getElementById('rpsls-only')
 const gameLengthBox = document.getElementById('game-length-choices')
 const playAgain = document.getElementById('play-again')
 
-
+/* Listener Events for starting each version of the Game */
 
 startClassicButton.addEventListener('click', startClassic);
 startRPSLSButton.addEventListener('click', startRPSLS);
@@ -132,7 +135,7 @@ function startRPSLS() {
     gameLengthBox.classList.remove('hidden')
 }
 
-let roundCountOutput = document.getElementById('round-count')
+/* Reload the Game so you can play again */
 
 function resetGame() {
     return window.location.assign(`index.html`)
