@@ -1,168 +1,144 @@
 body {
-    background-color: skyblue;
-    font-family: 'EB Garamond','Nova Square', serif;
-    padding: 0%;
-    margin: 0%;
-    padding-top: 90px;
-    text-align: center;
+	background-color: skyblue;
+	font-family: 'EB Garamond', 'Nova Square', serif;
+	padding: 0%;
+	margin: 0%;
+	padding-top: 90px;
+	text-align: center;
 }
-
 h1 {
-    margin: 0;
-    padding-top: 20px;
+	margin: 0;
+	padding-top: 20px;
 }
-
 header {
 	position: fixed;
 	width: 100%;
 	top: 0;
-    z-index: 998;
+	z-index: 998;
 }
-
 /* Header for the page that will always stay at the top of the page */
 
 .nav-bar {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(57, 126, 153);
-    top: 0;
-    height: 90px;
-    width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: rgb(57, 126, 153);
+	top: 0;
+	height: 90px;
+	width: 100%;
 	z-index: 999;
-    word-spacing: 25px;
+	word-spacing: 25px;
 }
-
 /* Styling for the instructions and the imaging showing the different game combinations */
 
 #instruction-title {
-    text-decoration: underline;
+	text-decoration: underline;
 }
-
 .instruction-box-left {
 	left: 1.5%;
 	width: 24%;
-    padding-right: 1%;
+	padding-right: 1%;
 	position: relative;
 	padding: 20px;
 	border-radius: 1rem;
 	line-height: 1.6;
 	float: left;
-    text-overflow: inherit;
+	text-overflow: inherit;
 }
-
 .instruction-box-right {
 	right: 1.5%;
 	width: 24%;
-    padding-left: 1%;
+	padding-left: 1%;
 	position: relative;
 	padding: 20px;
 	border-radius: 1rem;
 	line-height: 1.6;
 	float: right;
-    text-overflow: inherit;
+	text-overflow: inherit;
 }
-
 .explain-image {
-    width: 40%;
-    z-index: -9999;
-    align-items: center;
+	width: 40%;
+	z-index: -9999;
+	align-items: center;
 }
-
 /* Styling for the Game Buttons */
 
 .start-game {
-    border-radius: 1.5rem;
-    font-size: 125%;
-    width: 40%;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding: 10px;
+	border-radius: 1.5rem;
+	font-size: 125%;
+	width: 40%;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 30%;
+	margin-right: 30%;
+	padding: 10px;
 }
-
 #game-container {
-    padding-bottom: 20px;
+	padding-bottom: 20px;
 }
-
 .start-game:hover {
-    background-color: navy;
-    color: whitesmoke
+	background-color: navy;
+	color: whitesmoke
 }
-
 .game-length {
-    text-align: center;
+	text-align: center;
 }
-
 .choices {
-    justify-content: center;
+	justify-content: center;
 }
-
 .choice {
-    cursor: pointer;
-    font-size: 150%;
-    border-radius: 1.5rem;
-    padding: 20px;
-    margin-right: 10px;
-    margin-top: 30px;
+	cursor: pointer;
+	font-size: 150%;
+	border-radius: 1.5rem;
+	padding: 20px;
+	margin-right: 10px;
+	margin-top: 30px;
 }
-
 .choice:hover {
-    background-color: navy;
-    color: whitesmoke
+	background-color: navy;
+	color: whitesmoke
 }
-
 .play-again {
-    cursor: pointer;
-    font-size: 200%;
-    border-radius: 1.5rem;
-    margin-right: 10px;
-    margin-top: 5px;
-    padding: 20px;
+	cursor: pointer;
+	font-size: 200%;
+	border-radius: 1.5rem;
+	margin-right: 10px;
+	margin-top: 5px;
+	padding: 20px;
 }
-
 .play-again:hover {
-    background-color: navy;
-    color: whitesmoke
+	background-color: navy;
+	color: whitesmoke
 }
-
 /* Styling for the results display showing scores and previous results */
 
 .results {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-    padding-bottom: 50px;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	justify-items: center;
+	padding-bottom: 50px;
 }
-
 .result-heading {
-    font-size: 200%;
+	font-size: 200%;
 }
-
 .result-score {
-    font-size: 150%;
+	font-size: 150%;
 }
-
 .winner {
-    font-size: 150%;
-    padding-bottom: 5px;
-    text-decoration: underline;
+	font-size: 150%;
+	padding-bottom: 5px;
+	text-decoration: underline;
 }
-
 .loser {
-    color: rgb(83, 83, 83)
+	color: rgb(83, 83, 83)
 }
-
 .hidden {
-    display: none;
+	display: none;
 }
-
 .rules-box {
-    left: 5%;
+	left: 5%;
 }
-
 /* Styling for the footer of the page */
 
 footer {
@@ -172,24 +148,19 @@ footer {
 	margin: 0;
 	border-top: 3px solid black;
 }
-
-
 .social-networks {
 	background-color: rgb(57, 126, 153);
 	text-align: center;
 }
-
 .social-networks>li {
 	display: inline;
 }
-
 .social-networks i {
 	font-size: 150%;
 	margin: 1%;
 	padding: 1%;
 	color: black;
 }
-
 /** Media queries for smaller screen sizes */
 
 @media screen and (max-width: 800px) {
@@ -197,25 +168,23 @@ footer {
 		width: 90%;
 		margin-left: 5%;
 		margin-right: 5%;
-        display: block;
-        float: none;
+		display: block;
+		float: none;
 	}
-
 	.instruction-box-left {
 		width: 90%;
-        padding-top: 0;
+		padding-top: 0;
 		margin-left: 5%;
 		margin-right: 5%;
-        display: block;
-        float: none;
+		display: block;
+		float: none;
 	}
-
-    .explain-image {
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        z-index: -9999;
-        align-items: center;
-        display: block;
-    }
+	.explain-image {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		z-index: -9999;
+		align-items: center;
+		display: block;
+	}
 }
