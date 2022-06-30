@@ -151,3 +151,5 @@ function startRPSLS() {
 function resetGame() {
     return window.location.assign(`index.html`)
 }
+
+/*jshint esversion: 6 */
