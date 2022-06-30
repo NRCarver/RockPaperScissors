@@ -2,7 +2,7 @@
 
 ![](../assets/images/readMe/RPSLS-responsive.png)
 
-[View the website here](LINK TO THE WEBSITE!)
+[View the website here](https://nrcarver.github.io/RockPaperScissors/)
 
 This website has been created as a fun game for people to play and to introduce people to 'Rock, Paper, Scissors, Lizard, Spock' (RPSLS), a newer version of the traditional game, 'Rock, Paper, Scissors'.
 
